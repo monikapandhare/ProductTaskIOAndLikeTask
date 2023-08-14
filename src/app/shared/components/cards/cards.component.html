@@ -1,0 +1,20 @@
+<ng-container *ngIf="getProduct.length > 0;else proCatl">
+    <div class="card my-4" *ngFor="let prod of getProduct">
+        <div class="card-header text-center" 
+        [ngClass] = "{
+            'alert-success' : prod.pCategory === 'product',
+            'alert-warning' : prod.pCategory === 'catlog'
+
+        }">
+           <h3> {{prod.PName}}</h3>
+        </div>
+        <div class="card-body m-0">
+          <p>{{prod.pDescription}}</p>
+        </div>
+    </div>
+</ng-container>
+<ng-template #proCatl>
+    <p class="alert alert-danger mt-4 text-capitalize text-center">
+        no product added yet !!!
+    </p>
+</ng-template>

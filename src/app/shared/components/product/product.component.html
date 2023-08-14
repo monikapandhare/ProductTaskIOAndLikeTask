@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label>product Name</label>
+    <input type="text" #PName class="form-control">
+</div>
+<div class="form-group">
+    <label>Product Description</label>
+    <textarea type="text" cols="5" rows="10" #Pdescription class="form-control"></textarea>
+</div>
+<div class="text-right">
+    <button class="btn btn-primary mr-4"
+    (click) ="onAddPrd()">Add Product</button>
+    <button class="btn btn-success" (click)="onAddCat()">Add catlog</button>
+</div>
